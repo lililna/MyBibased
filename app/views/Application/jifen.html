@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="@{'/public/icon/iconfontgr/iconfont_3/iconfont.css'}" />
+		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/jifen.css'}" />
+		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/jump.css'}" />
+		<link rel="stylesheet" type="text/css" href="@{'/public/icon/jumpiconfont/iconfont.css'}" />
+		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/reset.css'}" />
+		<script type="text/javascript" src="@{'/public/javascripts/rem.js'}"></script>
+		
+	</head>
+	<body>
+		<div class="top">
+			<div class="top1">
+				<div class="iconfont icon-jiantouzuo"></div>
+				<div>积分兑换</div>
+				<div class="iconfont icon-fenlei"></div>
+			</div>
+		</div>
+		
+		<div class="header">
+			您当前可以用积分：0
+		</div>
+		
+		<div class="chakan">
+			查看已兑换产品
+		</div>
+		<div class="jump">
+	        <a href="/">
+	            <i class="iconfont icon-shouye icon-footer"></i>
+	            <p>首页</p>
+	        </a>
+	        <a href="/fenlei">
+	            <i class="iconfont icon-fenlei icon-footer"></i>
+	            <p>分类</p>
+	        </a>
+	        <a href="/gwc">
+	            <i class="iconfont icon-gouwuche icon-footer"></i>
+	            <p>购物车</p>
+	        </a>
+	        <a href="/dingdan">
+	            <i class="iconfont icon-icon icon-footer"></i>
+	            <p>我的订单</p>
+	        </a>
+	        <a href="/ZX">
+	            <i class="iconfont icon-gerenzhongxin icon-footer"></i>
+	            <p>个人中心</p>
+	        </a>
+	    </div>
+	</body>
+	<script type="text/javascript" src="/public/javascripts/jquery-1.10.2.min.js" ></script>
+	<script>
+		$(function(){
+			$(".chakan").mousemove(function(){
+			    $(".chakan").css("background","#A9A9A9")
+			})
+			$(".chakan").mouseleave(function(){
+			    $(".chakan").css("background","#EEEEEE")
+			})
+			
+			$(".header").mousemove(function(){
+			    $(".header").css("background","#A9A9A9")
+			})
+			$(".header").mouseleave(function(){
+			    $(".header").css("background","#EEEEEE")
+			})
+		})
+	</script>
+</html>

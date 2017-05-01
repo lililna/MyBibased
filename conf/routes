@@ -1,0 +1,35 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                      Application.index
+GET     /bangzhu                         Application.bangzhu
+GET     /daili                                Application.daili
+GET     /details                            Application.details
+GET     /dingdan                          Application.dingdan
+GET     /dizhi                               Application.dizhi
+GET     /erweima                         Application.erweima
+GET     /fenlei                              Application.fenlei
+GET     /gwc                                Application.gwc
+GET     /huanying                        Application.huanying
+GET     /jifen                                Application.jifen
+GET     /naconfirm                       Application.naconfirm
+GET     /shenqingtixian                Application.shenqingtixian
+GET     /splist                              Application.splist
+GET     /tuiguangdianji                 Application.tuiguangdianji
+GET     /tuiguangdingdan             Application.tuiguangdingdan
+GET     /tuiguangguanzhu            Application.tuiguangguanzhu
+GET     /wodeyinhangka             Application.wodeyinhangka
+GET     /wodeyongjin                  Application.wodeyongjin
+GET     /ziliao                             Application.ziliao
+GET     /ZX                                 Application.ZX
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

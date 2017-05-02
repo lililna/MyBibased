@@ -98,6 +98,7 @@ $.ajax({
 			//var all = "all"+id;
 		    var all = JSON.stringify(jsonobj);
 			localStorage.setItem("all"+id,all);
+			layer.msg("加入购物车成功！");
 		})
 		
 		/*立即购买*/

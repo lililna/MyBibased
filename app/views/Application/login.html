@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>	
+		<link rel="stylesheet" type="text/css" href="@{'/public/icon/iconfontgr/iconfont_3/iconfont.css'}" />
+		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/login.css'}" />
+		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/reset.css'}" />
+		<script type="text/javascript" src="@{'/public/javascripts/rem.js'}"></script>
+		
+	</head>
+	<body>
+		<div class="ziliao">
+			<div class="ziliao1">
+				<div class="iconfont icon-jiantouzuo fh"><<</div>
+				<div>登录</div>
+				<div class="iconfont icon-fenlei"></div>
+			</div>
+		</div>
+		<div class="xiamian">
+			<div>
+				<p>用户名：</p>
+				<input type="text" placeholder="请输入用户名" class="qq"/>
+				<span id="a"></span>
+			</div>
+			 
+			<div>
+				<p>密码：</p>
+				<input type="password" placeholder="请输入密码"/>
+				<span id="mima"></span>
+			</div>
+			 
+			<div>
+				<input type="button" value="确定" id="btn"/>
+			</div>
+			<div class="register">
+				没有账号？30s免费<a href="/register">注册</a>
+			</div>
+		</div>
+	</body>
+		<script type="text/javascript" src="@{'/public/javascripts/jquery-1.10.2.min.js'}" ></script>
+		<script type="text/javascript">
+			$(".fh").click(function(){
+				window.location.href = "/ZX";
+			})
+		</script>
+</html>

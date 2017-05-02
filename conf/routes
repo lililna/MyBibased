@@ -24,6 +24,8 @@ GET     /wodeyinhangka             Application.wodeyinhangka
 GET     /wodeyongjin                  Application.wodeyongjin
 GET     /ziliao                             Application.ziliao
 GET     /ZX                                 Application.ZX
+GET     /register                            Application.register
+GET     /login                           Application.login
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

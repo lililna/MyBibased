@@ -81,4 +81,10 @@ public class Application extends Controller {
     public static void ZX() {
         render();
     }
+    public static void register() {
+        render();
+    }
+    public static void login() {
+        render();
+    }
 }

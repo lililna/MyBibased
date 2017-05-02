@@ -17,7 +17,8 @@
 	</head>
 	<body>
 		<div class="top">
-			<span class="iconfont">&#xe616;</span><span class="iconfont">&#xe67e;</span>
+			<span class="iconfont">&#xe616;</span> 
+			<span><b id="login">登录</b><b>/</b><b id="register">注册</b></span>
 		</div>
 		<div class="heater">
 			<div class="heater_L">
@@ -25,9 +26,8 @@
 			</div>
 			<div class="heater_R">
 				<p>昵称:<span>XXX</span></p>
-				<p>ID号:<span>XXX</span></p>
-				<p>等级:<span>普通会员代理(<span>分享微店赚佣金</span>)</span></p>
-				<p>关注:<span>XXXX-XX——XX</span></p>
+				<p>手机号:<span>XXX</span></p>
+				<p>会员等级:<span>XXXX-XX——XX</span></p>
 			</div>
 		</div>
 		<div class="jiFen">
@@ -159,5 +159,11 @@
 			z = true;
 			$(".hYuan2_W").parent().animate({"height":"2.35rem"},300)
 		}
+	})
+	$("#register").click(function(){
+		window.location.href = "/register";
+	})
+	$("#login").click(function(){
+		window.location.href = "/login";
 	})
 </script>

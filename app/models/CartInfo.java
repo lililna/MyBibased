@@ -12,46 +12,48 @@ import play.libs.Crypto;
 import play.libs.Crypto.HashType;
 
 /**
- * 商品信息
+ * 微信文章信息
  * 
  * @author Administrator
  * 
  */
-@Entity(name = "package_info")
-public class PackageInfo extends Model{
+@Entity(name = "cart_info")
+public class CartInfo extends Model{
+	 
 	/**
-	 * 商品图
+	 * 用户名
 	 */
 	@Required
-	public String src;
+	public String userName;
+	
 	/**
 	 * 商品名
 	 */
 	@Required
-	public String name;
-	
+	public String goodsName;
+
 	/**
-	 * 商品现价
+	 * 商品图片
 	 */
 	@Required
+	public String goodsImg;
+
+	/**
+	 * 商品价格
+	 */
 	public String price;
 
+
 	/**
-	 * 商品原价
+	 * 商品数量
 	 */
 	@Required
-	public String delprice;
-
+	public String count;
+	
 	/**
-	 * 商品类型
-	 */
-	public String goodstype;
-
-
-	/**
-	 * 商品类别号
+	 * 商品类别
 	 */
 	@Required
-	public int typenum;
+	public String typeId;
 
 }

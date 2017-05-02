@@ -110,4 +110,21 @@ public class Application extends Controller {
     	}
     	
     }
+    public static void addcart(String userName,String goodsName,String goodsImg,String price,String count,String typeId) {
+    	List<CartInfo> mygoods = CartInfo.find("userName = ? and typeId = ?",userName,typeId).fetch();
+    	if(mygoods.size()<=0){
+    		CartInfo goods = new CartInfo();
+        	goods.userName = userName;
+        	goods.goodsName = goodsName;
+        	goods.goodsImg = goodsImg;
+        	goods.price = price;
+        	goods.count = count;
+        	goods.typeId = typeId;
+        	goods.save();
+        	renderJSON(1);
+    	}else{
+    		renderJSON(2);
+    	}
+    	
+    }
 }

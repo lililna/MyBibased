@@ -17,8 +17,8 @@ import play.libs.Crypto.HashType;
  * @author Administrator
  * 
  */
-@Entity(name = "package_info")
-public class PackageInfo extends Model{
+@Entity(name = "details_info")
+public class DetailsInfo extends Model{
 	/**
 	 * 商品图
 	 */
@@ -49,9 +49,28 @@ public class PackageInfo extends Model{
 
 
 	/**
-	 * 商品类别号
+	 * 商品展示图a
 	 */
 	@Required
-	public int typenum;
+	public String imga;
+	
+	/**
+	 * 商品展示图b
+	 */
+	@Required
+	public String imgb;
+	
+	/**
+	 * 商品展示图c
+	 */
+	@Required
+	public String imgc;
+	
+	/**
+	 * 商品展示图d
+	 */
+	@Required
+	public String imgd;
+
 
 }

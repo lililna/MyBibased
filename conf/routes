@@ -28,6 +28,7 @@ GET     /register                            Application.register
 POST    /registerinfo                            Application.registerinfo
 GET     /login                           Application.login
 POST    /logininfo                           Application.logininfo
+POST    /addcart                           Application.addcart
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

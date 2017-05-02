@@ -98,7 +98,26 @@ $.ajax({
 			//var all = "all"+id;
 		    var all = JSON.stringify(jsonobj);
 			localStorage.setItem("all"+id,all);
-			layer.msg("加入购物车成功！");
+	
+			var userName = $.cookie("userName");
+			if(userName==null||userName==undefined||userName=="null"){
+				window.location.href = "/login";
+			}else{
+				$.ajax({
+				    type:"POST",
+				    url:"/addcart",
+				    dataType:"json",
+				    data:{userName:userName,goodsName:name,goodsImg:goodsimg,price:price,count:count,typeId:id},
+				    success:function(msg){
+				    	console.log(msg);
+				    	if(msg==1){
+				    		layer.msg("加入购物车成功！");
+				    	}else if(msg==2){
+				    		layer.msg("商品已添加，不可重复添加！");
+				    	}			        
+				    }
+				}) 
+			}
 		})
 		
 		/*立即购买*/

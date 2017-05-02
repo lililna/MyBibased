@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/login.css'}" />
 		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/reset.css'}" />
 		<script type="text/javascript" src="@{'/public/javascripts/jquery-1.10.2.min.js'}" ></script>
+		<script type="text/javascript" src="@{'/public/javascripts/layer.js'}" ></script>
 		<script type="text/javascript" src="@{'/public/javascripts/rem.js'}"></script>
 		<script type="text/javascript" src="@{'/public/javascripts/jquery.cookie.js'}"></script>
 	</head>
@@ -54,9 +55,12 @@
 				    data:{username:username,password:password},
 				    success:function(msg){
 				    	console.log(msg);
-				    	if(msg.length>0){
-				    		//layer.msg("恭喜登录成功！");
-					        //window.location.href = "/"; 
+				    	if(msg==2){
+				    		layer.msg("密码错误");
+				    	}else if(msg==3){
+				    		layer.msg("用户不存在");
+				    	}else{
+					        window.location.href = "/"; 
 					        $.cookie("userName",msg[0].userName);
 					        $.cookie("phoneNum",msg[0].phoneNum);
 				    	}

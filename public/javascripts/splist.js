@@ -14,7 +14,7 @@ $(function(){
 			success:function(data){
 				for(var i in data){
 					if(data[i].typenum == num){
-						str+='<a href="details.html?id='+data[i].id+'">'
+						str+='<a href="/details?id='+data[i].id+'">'
 						str+='<div>'
 						str+="<img src="+data[i].src+">"
 						str+='<p class="p1">'+data[i].name+'</p>'
@@ -37,7 +37,7 @@ $(function(){
 			success: function (data) {
 				for(var i in data){
 					if(data[i].name.indexOf(decodeURI(words)) != -1){
-						str+='<a href="/app/views/Application/details.html?id='+data[i].id+'">'
+						str+='<a href="/details?id='+data[i].id+'">'
 						str+='<div>'
 						str+="<img src="+data[i].src+">"
 						str+='<p class="p1">'+data[i].name+'</p>'
@@ -49,5 +49,19 @@ $(function(){
 				mainc.html(str);
 			}
 		})
+	}
+	var id = location.href.split("=")[1];
+	if(id==1){
+		$("header").html("传统糕点");
+	}else if(id==2){
+		$("header").html("西餐");
+	}else if(id==3){
+		$("header").html("日韩料理");
+	}else if(id==4){
+		$("header").html("火锅食材");
+	}else if(id==5){
+		$("header").html("甜点饮品");
+	}else if(id==6){
+		$("header").html("办公食品");
 	}
 })

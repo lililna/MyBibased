@@ -176,9 +176,13 @@
 	
 	$(".userName").html($.cookie("userName"));
 	$(".phoneNum").html($.cookie("phoneNum"));
-	if($.cookie("userName")!=null&&$.cookie("userName")!=undefined){
+	if($.cookie("userName")=="null"){
+		$(".userName").html("XXX");
+		$(".phoneNum").html("XXX");
+	}
+	if($.cookie("userName")!=null&&$.cookie("userName")!=undefined&&$.cookie("userName")!="null"){
 		$(".bb").addClass("hide");
-		$("#tuichu").removeClass("hide");
+		$("#tuichu").removeClass("hide");	
 	}else{
 		$(".bb").removeClass("hide");
 		$("#tuichu").addClass("hide");
@@ -188,5 +192,7 @@
 		$.cookie("phoneNum",null);
 		$(".bb").removeClass("hide");
 		$("#tuichu").addClass("hide");
+		$(".userName").html("XXX");
+		$(".phoneNum").html("XXX");
 	})
 </script>

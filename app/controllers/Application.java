@@ -96,6 +96,18 @@ public class Application extends Controller {
     }
     public static void logininfo(String username,String password) {
     	List<UserInfo> user = UserInfo.find("userName = ? and password = ?",username,password).fetch();
-    	renderJSON(user);
+    	List<UserInfo> name = UserInfo.find("userName = ?",username).fetch();
+    	String data;
+    	if(user.size()>0){
+    		data = "1";
+    		renderJSON(user);
+    	}else if(name.size()>0){
+    		data = "2";
+    		renderJSON(data);
+    	}else{
+    		data = "3";
+    		renderJSON(data);
+    	}
+    	
     }
 }

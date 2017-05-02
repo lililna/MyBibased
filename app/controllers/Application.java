@@ -94,4 +94,8 @@ public class Application extends Controller {
     public static void login() {
         render();
     }
+    public static void logininfo(String username,String password) {
+    	List<UserInfo> user = UserInfo.find("userName = ? and password = ?",username,password).fetch();
+    	renderJSON(user);
+    }
 }

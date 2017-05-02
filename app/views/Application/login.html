@@ -7,8 +7,9 @@
 		<link rel="stylesheet" type="text/css" href="@{'/public/icon/iconfontgr/iconfont_3/iconfont.css'}" />
 		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/login.css'}" />
 		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/reset.css'}" />
+		<script type="text/javascript" src="@{'/public/javascripts/jquery-1.10.2.min.js'}" ></script>
 		<script type="text/javascript" src="@{'/public/javascripts/rem.js'}"></script>
-		
+		<script type="text/javascript" src="@{'/public/javascripts/jquery.cookie.js'}"></script>
 	</head>
 	<body>
 		<div class="ziliao">
@@ -21,13 +22,13 @@
 		<div class="xiamian">
 			<div>
 				<p>用户名：</p>
-				<input type="text" placeholder="请输入用户名" class="qq"/>
+				<input type="text" placeholder="请输入用户名" class="name"/>
 				<span id="a"></span>
 			</div>
 			 
 			<div>
 				<p>密码：</p>
-				<input type="password" placeholder="请输入密码"/>
+				<input type="password" placeholder="请输入密码" class="password"/>
 				<span id="mima"></span>
 			</div>
 			 
@@ -39,10 +40,29 @@
 			</div>
 		</div>
 	</body>
-		<script type="text/javascript" src="@{'/public/javascripts/jquery-1.10.2.min.js'}" ></script>
 		<script type="text/javascript">
 			$(".fh").click(function(){
 				window.location.href = "/ZX";
+			})
+			$("#btn").click(function(){
+				var username = $(".name").val();
+				var password = $(".password").val();
+				$.ajax({
+				    type:"POST",
+				    url:"/logininfo",
+				    dataType:"json",
+				    data:{username:username,password:password},
+				    success:function(msg){
+				    	console.log(msg);
+				    	if(msg.length>0){
+				    		//layer.msg("恭喜登录成功！");
+					        //window.location.href = "/"; 
+					        $.cookie("userName",msg[0].userName);
+					        $.cookie("phoneNum",msg[0].phoneNum);
+				    	}
+				        
+				    }
+				}) 
 			})
 		</script>
 </html>

@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="@{'/public/icon/jumpiconfont/iconfont.css'}" />
 		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/reset.css'}" />
 		<script type="text/javascript" src="@{'/public/javascripts/jquery-1.11.1.min.js'}"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/jquery.cookie.js'}"></script>
 		<script type="text/javascript" src="@{'/public/javascripts/zepto.js'}"></script>
 		<script type="text/javascript" src="@{'/public/javascripts/rem.js'}"></script>
 		
@@ -18,16 +19,21 @@
 	<body>
 		<div class="top">
 			<span class="iconfont">&#xe616;</span> 
-			<span><b id="login">登录</b><b>/</b><b id="register">注册</b></span>
+			<span>
+				<b id="login" class="bb">登录</b>
+				<b class="bb">/</b>
+				<b id="register" class="bb">注册</b>
+				<i id="tuichu" class="hide">退出登录</i>
+			</span>
 		</div>
 		<div class="heater">
 			<div class="heater_L">
 				<div><img src="/public/images/Tx.jpg" alt="" /></div>
 			</div>
 			<div class="heater_R">
-				<p>昵称:<span>XXX</span></p>
-				<p>手机号:<span>XXX</span></p>
-				<p>会员等级:<span>XXXX-XX——XX</span></p>
+				<p>昵称:<span class="userName">XXX</span></p>
+				<p>手机号:<span class="phoneNum">XXX</span></p>
+				<p>亲爱的用户欢迎你哦~</p>
 			</div>
 		</div>
 		<div class="jiFen">
@@ -160,10 +166,27 @@
 			$(".hYuan2_W").parent().animate({"height":"2.35rem"},300)
 		}
 	})
+	
 	$("#register").click(function(){
 		window.location.href = "/register";
 	})
 	$("#login").click(function(){
 		window.location.href = "/login";
+	})
+	
+	$(".userName").html($.cookie("userName"));
+	$(".phoneNum").html($.cookie("phoneNum"));
+	if($.cookie("userName")!=null&&$.cookie("userName")!=undefined){
+		$(".bb").addClass("hide");
+		$("#tuichu").removeClass("hide");
+	}else{
+		$(".bb").removeClass("hide");
+		$("#tuichu").addClass("hide");
+	}
+	$("#tuichu").click(function(){
+		$.cookie("userName",null);
+		$.cookie("phoneNum",null);
+		$(".bb").removeClass("hide");
+		$("#tuichu").addClass("hide");
 	})
 </script>

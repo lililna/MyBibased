@@ -27,9 +27,10 @@ GET     /ZX                                 Application.ZX
 GET     /register                            Application.register
 POST    /registerinfo                            Application.registerinfo
 GET     /login                           Application.login
+POST    /logininfo                           Application.logininfo
 
 # Ignore favicon requests
-GET     /favicon.ico                            404
+# GET     /favicon.ico                            404
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public

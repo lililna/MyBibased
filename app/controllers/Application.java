@@ -10,7 +10,13 @@ import models.*;
 public class Application extends Controller {
 
     public static void index() {
-        render();
+    	List<PackageInfo> ctgds = PackageInfo.find("typenum = 1").fetch();
+    	List<PackageInfo> xcs = PackageInfo.find("typenum = 2").fetch();
+    	List<PackageInfo> rhlls = PackageInfo.find("typenum = 3").fetch();
+    	List<PackageInfo> hgscs = PackageInfo.find("typenum = 4").fetch();
+    	List<PackageInfo> tdyps = PackageInfo.find("typenum = 5").fetch();
+    	List<PackageInfo> bgsps = PackageInfo.find("typenum = 6").fetch();
+        render(ctgds,xcs,rhlls,hgscs,tdyps,bgsps);
     }
     public static void bangzhu() {
         render();

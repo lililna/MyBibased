@@ -8,7 +8,7 @@ var mySwiper = new Swiper ('.swiper-container', {
 function rand(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
 }
-$.ajax({
+/*$.ajax({
     type:"get",
     url:"/public/json/package.json",
     dataType:"json",
@@ -24,7 +24,7 @@ $.ajax({
             }
         }
     }
-})
+})*/
 $("input.btn").click(function () {
     var str = $(this).prev().val();
     if(str) {

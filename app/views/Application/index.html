@@ -37,7 +37,7 @@
         <input class="btn" type="button" value="搜索" />
     </form>
     <div class="main">
-        <div class="type">
+        <!-- <div class="type">
             <div class="name">
                 <i></i>
                 <p>传统糕点</p>
@@ -90,6 +90,166 @@
             <a class="more" href="/app/views/Application/splist.html?num=6">查看更多</a>
         </div>
         <div class="goods">
+        </div> -->
+        
+		<!-- <div class="name">
+		    <i></i>
+		    <p>传统糕点</p>
+		</div>
+			<a class="more" href="/app/views/Application/splist.html?num=1">查看更多</a>
+			<div class="goods">
+			#{list items:ctgds, as:'ctgd'}
+			<a href="/details?id=1">
+				<dl>
+					<dt>
+						<img src="${ctgd.src}" alt="">
+					</dt>
+					<dd>
+						<p class="descri">${ctgd.name}</p>
+						<p class="money">${ctgd.price}<span>${ctgd.delprice}</span></p>
+					</dd>
+				</dl>
+			</a>
+			#{/list}
+		</div> -->
+
+		//传统糕点
+ 		<div class="type">
+            <div class="name">
+                <i></i>
+                <p>传统糕点</p>
+            </div>
+            <a class="more" href="/app/views/Application/splist.html?num=1">查看更多</a>
+        </div>
+        <div class="goods">
+	        #{list items:ctgds, as:'ctgd'}
+				<a href="/details?id=1">
+					<dl>
+						<dt>
+							<img src="${ctgd.src}" alt="">
+						</dt>
+						<dd>
+							<p class="descri">${ctgd.name}</p>
+							<p class="money">${ctgd.price}<span>${ctgd.delprice}</span></p>
+						</dd>
+					</dl>
+				</a>
+			#{/list}
+        </div>
+        //西餐
+        <div class="type">
+            <div class="name">
+                <i></i>
+                <p>西餐</p>
+            </div>
+            <a class="more" href="/app/views/Application/splist.html?num=2">查看更多</a>
+        </div>
+        <div class="goods">
+	        #{list items:xcs, as:'xc'}
+				<a href="/details?id=1">
+					<dl>
+						<dt>
+							<img src="${xc.src}" alt="">
+						</dt>
+						<dd>
+							<p class="descri">${xc.name}</p>
+							<p class="money">${xc.price}<span>${xc.delprice}</span></p>
+						</dd>
+					</dl>
+				</a>
+			#{/list}
+        </div>
+         //日韩料理
+        <div class="type">
+            <div class="name">
+                <i></i>
+                <p>日韩料理</p>
+            </div>
+            <a class="more" href="/app/views/Application/splist.html?num=3">查看更多</a>
+        </div>
+        <div class="goods">
+	        #{list items:rhlls, as:'rhll'}
+				<a href="/details?id=1">
+					<dl>
+						<dt>
+							<img src="${rhll.src}" alt="">
+						</dt>
+						<dd>
+							<p class="descri">${rhll.name}</p>
+							<p class="money">${rhll.price}<span>${rhll.delprice}</span></p>
+						</dd>
+					</dl>
+				</a>
+			#{/list}
+        </div>
+         //火锅食材
+        <div class="type">
+            <div class="name">
+                <i></i>
+                <p>火锅食材</p>
+            </div>
+            <a class="more" href="/app/views/Application/splist.html?num=4">查看更多</a>
+        </div>
+        <div class="goods">
+	        #{list items:hgscs, as:'hgsc'}
+				<a href="/details?id=1">
+					<dl>
+						<dt>
+							<img src="${hgsc.src}" alt="">
+						</dt>
+						<dd>
+							<p class="descri">${hgsc.name}</p>
+							<p class="money">${hgsc.price}<span>${hgsc.delprice}</span></p>
+						</dd>
+					</dl>
+				</a>
+			#{/list}
+        </div>
+         //甜点饮品
+        <div class="type">
+            <div class="name">
+                <i></i>
+                <p>甜点饮品</p>
+            </div>
+            <a class="more" href="/app/views/Application/splist.html?num=5">查看更多</a>
+        </div>
+        <div class="goods">
+	        #{list items:tdyps, as:'tdyp'}
+				<a href="/details?id=1">
+					<dl>
+						<dt>
+							<img src="${tdyp.src}" alt="">
+						</dt>
+						<dd>
+							<p class="descri">${tdyp.name}</p>
+							<p class="money">${tdyp.price}<span>${tdyp.delprice}</span></p>
+						</dd>
+					</dl>
+				</a>
+			#{/list}
+        </div>
+         //办公食品
+        <div class="type">
+            <div class="name">
+                <i></i>
+                <p>办公食品</p>
+            </div>
+            <a class="more" href="/app/views/Application/splist.html?num=6">查看更多</a>
+        </div>
+        <div class="goods">
+	        #{list items:bgsps, as:'bgsp'}
+				<a href="/details?id=1">
+					<dl>
+						<dt>
+							<img src="${bgsp.src}" alt="">
+						</dt>
+						<dd>
+							<p class="descri">${bgsp.name}</p>
+							<p class="money">${bgsp.price}<span>${bgsp.delprice}</span></p>
+						</dd>
+					</dl>
+				</a>
+			#{/list}
         </div>
     </div>
     <footer>

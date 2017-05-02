@@ -84,6 +84,13 @@ public class Application extends Controller {
     public static void register() {
         render();
     }
+    public static void registerinfo(String username,String phonenum,String password) {
+    	UserInfo users = new UserInfo();
+    	users.userName = username;
+    	users.phoneNum = phonenum;
+    	users.password = password;
+    	users.save();
+    }
     public static void login() {
         render();
     }

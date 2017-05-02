@@ -22,22 +22,22 @@
 		<div class="xiamian">
 			<div>
 				<p>用户名：</p>
-				<input type="text" placeholder="请输入用户名" class="qq"/>
+				<input type="text" placeholder="请输入用户名" class="username"/>
 				<span id="a"></span>
 			</div>
 			<div>
 				<p>手机号码：</p>
-				<input type="text" placeholder="请输入您的手机号码"/>
+				<input type="text" placeholder="请输入您的手机号码" class="phonenum"/>
 				<span id="b"></span>
 			</div>
 			<div>
 				<p>密码：</p>
-				<input type="password" placeholder="请输密码（字母开头）"/>
+				<input type="password" placeholder="请输密码（字母开头）" class="password"/>
 				<span id="mima"></span>
 			</div>
 			<div>
 				<p>确认密码：</p>
-				<input type="password" placeholder="请确认密码"/>
+				<input type="password" placeholder="请确认密码" class="confirm"/>
 				<span id="confirmmima"></span>
 			</div>
 			 
@@ -108,18 +108,28 @@
 			
 			$("#btn").click(function(){
 				if(re.test($(".xiamian div:nth-child(1) input").val())&&re2.test($(".xiamian div:nth-child(2) input").val())&&mima.test($(".xiamian div:nth-child(3) input").val())&&$("#confirmmima").siblings("input").val()==$("#mima").siblings("input").val()){
-//					window.location.href=""
-alert(1)
+					//注册
+					 var username = $(".username").val();
+					 var password = $(".password").val();
+					 var phonenum = $(".phonenum").val();
+						$.ajax({
+						    type:"POST",
+						    url:"/registerinfo",
+						    dataType:"json",
+						    data:{username:username,phonenum:phonenum,password:password},
+						    success:function(msg){
+						        layer.msg("恭喜注册成功！");
+						        window.location.href = "/login";
+						    }
+						})
 				}else{
 					alert("输入有误，请改正！")
 				}
 			})
-			
+			//返回用户信息页面
 			$(".fh").click(function(){
 				window.location.href="/ZX";
 			})
-			
-
 		})
 	</script>
 </html>

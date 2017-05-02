@@ -21,10 +21,11 @@ GET     /tuiguangdianji                 Application.tuiguangdianji
 GET     /tuiguangdingdan             Application.tuiguangdingdan
 GET     /tuiguangguanzhu            Application.tuiguangguanzhu
 GET     /wodeyinhangka             Application.wodeyinhangka
-GET     /wodeyongjin                  Application.wodeyongjin
-GET     /ziliao                             Application.ziliao
+GET     /wodeyongjin                Application.wodeyongjin
+GET     /ziliao                       Application.ziliao
 GET     /ZX                                 Application.ZX
 GET     /register                            Application.register
+POST    /registerinfo                            Application.registerinfo
 GET     /login                           Application.login
 
 # Ignore favicon requests

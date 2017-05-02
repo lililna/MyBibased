@@ -44,6 +44,9 @@ $(function(){
 						str+='<p class="p2">'+'<span>'+data[i].price+'</span>'+'<span>'+data[i].delprice+'</span>'+'</p>'
 						str+='</div>'
 						str+='</a>'
+					}else{
+						str = "<div class='kong'><p>❃哎呀！没有搜索到相关商品~❃</p><img src='/public/images/no.png'></div>";
+						$("#main").css({"background-color":"#fff"});
 					}
 				}
 				mainc.html(str);
@@ -63,5 +66,7 @@ $(function(){
 		$("header").html("甜点饮品");
 	}else if(id==6){
 		$("header").html("办公食品");
+	}else{
+		$("header").html(decodeURI(location.href.split("=")[1]));
 	}
 })

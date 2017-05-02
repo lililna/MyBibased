@@ -1,6 +1,5 @@
 var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
-    // �����Ҫ��ҳ��
     pagination: '.swiper-pagination',
     paginationClickable :true,
     autoplay: 3000,

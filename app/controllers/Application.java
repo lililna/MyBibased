@@ -18,6 +18,10 @@ public class Application extends Controller {
     	List<PackageInfo> bgsps = PackageInfo.find("typenum = 6").fetch();
         render(ctgds,xcs,rhlls,hgscs,tdyps,bgsps);
     }
+    public static void detailsInfo() {
+    	List<DetailsInfo> allgoods = DetailsInfo.findAll();
+        renderJSON(allgoods);
+    }
     public static void bangzhu() {
         render();
     }

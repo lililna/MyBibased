@@ -37,30 +37,11 @@ $(".collect").click(function(){
 /*加入购物车*/
 //var id = 8;
 $.ajax({
-	type:"get",
-	url:"/public/json/napackage.json",
+	type:"POST",
+	url:"/detailsInfo",
 	async:true,
 	success:function(data){
 		for(var i in data){
-			if(id==6){
-				var str = '';
-				str += '<div class="swiper-slide">';
-		        str += '<img class="goodsimg" src="'+data[5].imgb+'" />';
-		        str += '</div>';
-		        str += '<div class="swiper-slide">';
-		        str += '<img src="'+data[5].imgc+'" />';
-		        str += '</div>';
-		        str += '<div class="swiper-slide">';
-		        str += '<img src="'+data[5].imgd+'" />';
-		        str += '</div>';
-		        
-		        var showstr = '';
-				showstr =  '<p class="detailp">'+data[5].p+'</p>';
-				$(".price").text(data[5].price);
-				$(".name").text(data[5].name);
-				var goodsimg = data[5].src;
-				var name = $(".name").text();
-			}
 			if(data[i].id==id){
 				var str = '';
 				str += '<div class="swiper-slide">';

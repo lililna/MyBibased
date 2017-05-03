@@ -8,7 +8,7 @@ body {
   height: 100%;
   background-color: #f2f2f2;
 }
-/*头部部分*/
+/**/
 header {
   width: 100%;
   height: 2.2rem;
@@ -57,6 +57,7 @@ header .fenlei {
   color: black;
   font-size: 0.7rem;
   border: 1px solid #fe9901;
+  list-style:none;
 }
 .main a {
   text-decoration: none;
@@ -76,6 +77,101 @@ header .fenlei {
   line-height: 4rem;
   color: #b5b5b5;
   font-size: 0.7rem;
+}
+#mainc {
+  width: 96%;
+  padding: 2%;
+}
+#mainc span {
+  font-size: 0.7rem;
+}
+#mainc #kong {
+  width: 100%;
+  height: 10rem;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainc #kong img {
+  width: 60%;
+  height: 80%;
+}
+#mainc div.sp {
+  margin-bottom: 0.2rem ;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 6rem;
+  align-items: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px #CCCCCC;
+  box-shadow: 0 0 10px #CCCCCC;
+}
+#mainc div.sp img {
+  width: 5.5rem;
+}
+#mainc div.sp div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#mainc div.sp div p:nth-child(1) {
+  white-space: nowrap;
+  width: 96%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#mainc div.sp div p {
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+#mainc div.sp div p.colors {
+  color: #e9342a;
+}
+#mainc div.sp div div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#mainc div.sp div div span {
+  font-size: 0.7rem;
+  color: #d5a7a7;
+}
+#mainc div.sp div div div {
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
+}
+#main #mainc div.sp div div div .txt {
+  font-size: 0.7rem;
+  height: 0.8rem;
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  width: 35%;
+}
+#mainc div.sp div div div .btn1 {
+  font-size: 0.7rem;
+  height: 1rem;
+  background: #f2f2f2;
+  width: 30%;
+  border: 1px solid #e1e1e1;
+}
+#mainc div.sp div div div .btn2 {
+  font-size: 0.7rem;
+  height: 1rem;
+  background: #f2f2f2;
+  width: 30%;
+  border: 1px solid #e1e1e1;
+}
+.hide{
+	display:none;
 }
 @media only screen and (min-width: 640px) {
   .main a {

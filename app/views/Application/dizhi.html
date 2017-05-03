@@ -9,7 +9,7 @@
 		<script type="text/javascript" src="@{'/public/javascripts/region_select.js'}"></script>
 		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/reset.css'}" />
 		<link rel="stylesheet" type="text/css" href="@{'/public/icon/iconfont2/iconfont/iconfont.css'}" />
-		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/dizhi.css}" />
+		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/dizhi.css'}" />
 		<link rel="stylesheet" type="text/css" href="@{'/public/icon/jumpiconfont/iconfont.css'}" />
 		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/jump.css'}" />
 	</head>
@@ -54,7 +54,7 @@
 			<input type="button" class="btn2 btn1" value="保存">
 			<input type="button" class="btn3 btn1" value="取消">
 		</div>
-		<footer>2015-2016<span>©</span>吃货网</footer>
+		<footer>2017-2018<span>©</span>吃货网</footer>
 		<div class="kong"></div>
 		<div class="jump">
 	        <a href="/index">
@@ -84,6 +84,9 @@
 	    	})
 	    	$(".top .zuo2").on("click",function(){
 	    		window.location.href="/app/views/Application/dingdan.html";
+	    	})
+	    	$(".zuo1").click(function(){
+	    		window.history.back();
 	    	})
 	    </script>
 	</body>

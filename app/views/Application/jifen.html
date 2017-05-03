@@ -16,7 +16,7 @@
 	<body>
 		<div class="top">
 			<div class="top1">
-				<div class="iconfont icon-jiantouzuo"></div>
+				<div class="iconfont icon-jiantouzuo jifen"><<</div>
 				<div>积分兑换</div>
 				<div class="iconfont icon-fenlei"></div>
 			</div>
@@ -67,6 +67,9 @@
 			})
 			$(".header").mouseleave(function(){
 			    $(".header").css("background","#EEEEEE")
+			})
+			$(".jifen").click(function(){
+				window.history.back();
 			})
 		})
 	</script>

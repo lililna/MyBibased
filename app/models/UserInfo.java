@@ -49,5 +49,11 @@ public class UserInfo extends Model{
 	 */
 	@Required
 	public String payNum;
+	
+	/**
+	 * 微信支付号
+	 */
+	@Required
+	public String weiNum;
 
 }

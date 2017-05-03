@@ -33,7 +33,7 @@ body {
 .xiamian {
   width: 100%;
   min-height: 97%;
-  background: #eeeeee;
+  background: #f5f5f5;
   margin-top: 2.2rem;
 }
 .xiamian div {
@@ -60,7 +60,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: green;
+  background: #ccc;
   display: none;
   font-size: 0.8rem;
   text-align: center;

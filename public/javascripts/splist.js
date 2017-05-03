@@ -8,8 +8,8 @@ $(function(){
 		var str = "";
 		var mainc = $("#mainc");
 		$.ajax({
-			type:"get",
-			url:"/public/json/package.json",
+			type:"POST",
+			url:"/packageInfo",
 			async:true,
 			success:function(data){
 				for(var i in data){
@@ -31,8 +31,8 @@ $(function(){
 		var mainc = $("#mainc");
 		var str = "";
 		$.ajax({
-			type:"get",
-			url:"/public/json/package.json",
+			type:"POST",
+			url:"/packageInfo",
 			async:true,
 			success: function (data) {
 				for(var i in data){

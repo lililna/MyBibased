@@ -18,6 +18,10 @@ public class Application extends Controller {
     	List<PackageInfo> bgsps = PackageInfo.find("typenum = 6").fetch();
         render(ctgds,xcs,rhlls,hgscs,tdyps,bgsps);
     }
+    public static void packageInfo() {
+    	List<PackageInfo> allgoods = PackageInfo.findAll();
+        renderJSON(allgoods);
+    }
     public static void detailsInfo() {
     	List<DetailsInfo> allgoods = DetailsInfo.findAll();
         renderJSON(allgoods);
@@ -105,6 +109,14 @@ public class Application extends Controller {
         	renderJSON(1);
     	}
     	
+    }
+    public static void wanshan(String userName,String phoneNum,String bank,String payNum,String weiNum) {
+    	UserInfo user = UserInfo.find("phoneNum = ?", phoneNum).first();
+    	user.userName = userName;
+    	user.bank = bank;
+    	user.payNum = payNum;
+    	user.weiNum = weiNum;
+        user.save();
     }
     public static void login() {
         render();

@@ -34,6 +34,8 @@ POST    /getcartinfo                           	Application.getcartinfo
 POST    /changecount                           	Application.changecount
 POST    /deletegoods                          	Application.deletegoods
 POST    /cleargoods                          	Application.cleargoods
+POST    /packageInfo                          	Application.packageInfo
+POST    /wanshan                          		Application.wanshan
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

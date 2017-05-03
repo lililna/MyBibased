@@ -14,35 +14,35 @@
 	<body>
 		<div class="ziliao">
 			<div class="ziliao1">
-				<div class="iconfont icon-jiantouzuo fh"></div>
+				<div class="iconfont icon-jiantouzuo fh"><<</div>
 				<div>完善资料</div>
 				<div class="iconfont icon-fenlei"></div>
 			</div>
 		</div>
 		<div class="xiamian">
 			<div>
-				<p>姓名昵称：</p>
-				<input type="text" placeholder="李巧娜" class="qq"/>
+				<p>用户名：</p>
+				<input type="text" placeholder="请输入用户名" class="qq username"/>
 				<span id="a"></span>
 			</div>
 			<div>
 				<p>手机号码：</p>
-				<input type="text" placeholder="请输入您的手机号码"/>
+				<input type="text" disabled="disabled" placeholder="请输入您的手机号码" class="number"/>
 				<span id="b"></span>
 			</div>
 			<div>
-				<p>银行名称：</p>
-				<input type="text" placeholder="请输入您的银行卡号"/>
+				<p>银行卡号：</p>
+				<input type="text" placeholder="请输入您的银行卡号" class="bank"/>
 				<span id="c"></span>
 			</div>
 			<div>
 				<p>支付宝号：</p>
-				<input type="text" placeholder="请输入您的支付宝号"/>
+				<input type="text" placeholder="请输入您的支付宝号" class="bao"/>
 				<span id="d"></span>
 			</div>
 			<div>
 				<p>微支付号：</p>
-				<input type="text" placeholder="请输入您的微信支付号码"/>
+				<input type="text" placeholder="请输入您的微信支付号码" class="weixin"/>
 				<span id="e"></span>
 			</div>
 			
@@ -53,6 +53,8 @@
 		</div>
 	</body>
 		<script type="text/javascript" src="@{'/public/javascripts/jquery-1.10.2.min.js'}" ></script>
+		<script type="text/javascript" src="@{'/public/javascripts/jquery.cookie.js'}" ></script>
+		<script type="text/javascript" src="@{'/public/javascripts/layer.js'}" ></script>
 	<script>
 		$(function(){
 			$(".ziliao1 .fh").click(function(){
@@ -64,13 +66,10 @@
 			var re1 =/^[a-zA-Z_]\w{5,19}$/;
 			var re = /[\u4e00-\u9fa5]{2,}/;
 			 $(".xiamian div:nth-child(1) input").focus(function(){
-			 	$(".xiamian div:nth-child(1) span ").css("display","block").html("最少2字")
-			 	
-//			     console.log(1)
+			 	$(".xiamian div:nth-child(1) span ").css("display","block").html("最少2字");
 			 })
 			  $(".xiamian div:nth-child(1) input").blur(function(){
 					 if(re.test($(".xiamian div:nth-child(1) input").val())){
-//					 	alert(1)
 					 		$(".xiamian div:nth-child(1) span ").css("display","block").html("输入正确")
 					 	}else{
 					 		$(".xiamian div:nth-child(1) span ").css("display","block").html("输入错误")
@@ -79,13 +78,10 @@
 			  })
 			  
 			   $(".xiamian div:nth-child(2) input").focus(function(){
-			 	$(".xiamian div:nth-child(2) span ").css("display","block").html("输入11位")
-			 	
-//			     console.log(1)
+			 	$(".xiamian div:nth-child(2) span ").css("display","block").html("输入11位");
 			 })
 			  $(".xiamian div:nth-child(2) input").blur(function(){
 					 if(re2.test($(".xiamian div:nth-child(2) input").val())){
-//					 	alert(1)
 					 		$(".xiamian div:nth-child(2) span ").css("display","block").html("输入正确")
 					 	}else{
 					 		$(".xiamian div:nth-child(2) span ").css("display","block").html("输入错误")
@@ -95,63 +91,66 @@
 			 $(".xiamian div:nth-child(3) input").focus(function(){
 			 	$(".xiamian div:nth-child(3) span ").css("display","block").html("输入19位")
 			 	
-//			     console.log(1)
 			 })
 			  $(".xiamian div:nth-child(3) input").blur(function(){
 					 if(re3.test($(".xiamian div:nth-child(3) input").val())){
-//					 	alert(1)
 					 		$(".xiamian div:nth-child(3) span ").css("display","block").html("输入正确")
 					 	}else{
 					 		$(".xiamian div:nth-child(3) span ").css("display","block").html("输入错误")
 					 	}
 			})	
-			 
-			 
-			 
+			 	 
 			  $(".xiamian div:nth-child(4) input").focus(function(){
 			 	$(".xiamian div:nth-child(4) span ").css("display","block").html("输入支付宝号")
-			 	
-//			     console.log(1)
 			 })
 			  $(".xiamian div:nth-child(4) input").blur(function(){
 					 if(re2.test($(".xiamian div:nth-child(4) input").val())){
-//					 	alert(1)
 					 		$(".xiamian div:nth-child(4) span ").css("display","block").html("输入正确")
 					 	}else if(re4.test($(".xiamian div:nth-child(4) input").val())){
 					 		$(".xiamian div:nth-child(4) span ").css("display","block").html("输入正确")
 					 	} else{
 					 		$(".xiamian div:nth-child(4) span ").css("display","block").html("输入错误")
 					 	}
-					 	
-					
 			})	
 			
 			 
 			  $(".xiamian div:nth-child(5) input").focus(function(){
 			 	$(".xiamian div:nth-child(5) span ").css("display","block").html("输入微信号")
-			 	
-//			     console.log(1)
 			 })
 			  $(".xiamian div:nth-child(5) input").blur(function(){
 					 if(re2.test($(".xiamian div:nth-child(5) input").val())){
-//					 	alert(1)
 					 		$(".xiamian div:nth-child(5) span ").css("display","block").html("输入正确")
 					 	}else if(re4.test($(".xiamian div:nth-child(5) input").val())){
 					 		$(".xiamian div:nth-child(5) span ").css("display","block").html("输入正确")
 					 	} else{
 					 		$(".xiamian div:nth-child(5) span ").css("display","block").html("输入错误")
 					 	}
-					 	
-					
 			})	
 			
 			$("#btn").click(function(){
 				if(re.test($(".xiamian div:nth-child(1) input").val())&&re2.test($(".xiamian div:nth-child(2) input").val())&&re3.test($(".xiamian div:nth-child(3) input").val())&&(re2.test($(".xiamian div:nth-child(4) input").val())||re4.test($(".xiamian div:nth-child(4) input").val()))&&(re2.test($(".xiamian div:nth-child(5) input").val())||re4.test($(".xiamian div:nth-child(5) input").val()))){
-//					window.location.href=""
-alert(1)
+					var userName = $(".username").val();
+					var phoneNum = $(".number").val();
+					var bank = $(".bank").val();
+					var bao = $(".bao").val();
+					var weixin = $(".weixin").val();
+					$.ajax({
+					    type:"POST",
+					    url:"/wanshan",
+					    dataType:"json",
+					    data:{userName:userName,phoneNum:phoneNum,bank:bank,payNum:bao,weiNum:weixin},
+					    success:function(msg){
+					    	 layer.msg("您的完善的信息已保存！");
+					    }
+					}) 
 				}else{
-					alert("输入有误，请改正！")
+					layer.msg("输入有误，请改正！")
 				}
+			})
+			$(".username").val($.cookie("userName"));
+			$(".number").val($.cookie("phoneNum"));
+			$(".fh").click(function(){
+				window.location.bank();
 			})
 
 		})

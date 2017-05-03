@@ -30,6 +30,10 @@ GET     /login                           		Application.login
 POST    /logininfo                           	Application.logininfo
 POST    /addcart                           		Application.addcart
 POST    /detailsInfo                           	Application.detailsInfo
+POST    /getcartinfo                           	Application.getcartinfo
+POST    /changecount                           	Application.changecount
+POST    /deletegoods                          	Application.deletegoods
+POST    /cleargoods                          	Application.cleargoods
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

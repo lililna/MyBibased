@@ -89,11 +89,22 @@ public class Application extends Controller {
         render();
     }
     public static void registerinfo(String username,String phonenum,String password) {
-    	UserInfo users = new UserInfo();
-    	users.userName = username;
-    	users.phoneNum = phonenum;
-    	users.password = password;
-    	users.save();
+    	UserInfo theinfo = UserInfo.find("userName = ? and phoneNum = ?",username,phonenum).first();
+    	UserInfo name = UserInfo.find("userName = ?",username).first();
+    	UserInfo num = UserInfo.find("phoneNum = ?",phonenum).first();
+    	if(name!=null){
+    		renderJSON(2);
+    	}else if(num!=null){
+    		renderJSON(3);
+    	}else{
+    		UserInfo users = new UserInfo();
+        	users.userName = username;
+        	users.phoneNum = phonenum;
+        	users.password = password;
+        	users.save();
+        	renderJSON(1);
+    	}
+    	
     }
     public static void login() {
         render();
@@ -128,7 +139,25 @@ public class Application extends Controller {
         	renderJSON(1);
     	}else{
     		renderJSON(2);
+    	}	
+    }
+    public static void getcartinfo(String userName) {
+    	List<CartInfo> mygoods = CartInfo.find("userName = ?",userName).fetch();
+        renderJSON(mygoods);
+    }
+    public static void changecount(String userName,String typeId,String count) {
+    	CartInfo thegoods = CartInfo.find("userName = ? and typeId = ?",userName,typeId).first();
+    	thegoods.count = count;
+    	thegoods.save();
+    }
+    public static void deletegoods(String userName,String typeId) {
+    	CartInfo thegoods = CartInfo.find("userName = ? and typeId = ?",userName,typeId).first();
+    	thegoods.delete();
+    }
+    public static void cleargoods(String userName) {
+    	List<CartInfo> mygoods = CartInfo.find("userName = ?",userName).fetch();
+    	for(CartInfo goods:mygoods){
+    		goods.delete();
     	}
-    	
     }
 }

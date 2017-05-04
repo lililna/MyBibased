@@ -31,7 +31,12 @@ $(".iknow").click(function(){
     $(".mask").hide();
 })
 $(".collect").click(function(){
-	$(".mask").css("display","flex");
+	if($(this).children("p").attr("type")==1){
+		$(this).children("p").attr("type","0").css("color","");
+	}else{
+		$(this).children("p").attr("type","1").css("color","#ff9900");
+	}
+	
 })
 
 /*加入购物车*/

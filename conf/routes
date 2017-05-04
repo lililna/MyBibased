@@ -36,6 +36,8 @@ POST    /deletegoods                          	Application.deletegoods
 POST    /cleargoods                          	Application.cleargoods
 POST    /packageInfo                          	Application.packageInfo
 POST    /wanshan                          		Application.wanshan
+GET     /xiugai                          		Application.xiugai
+POST    /xiugaiInfo                          	Application.xiugaiInfo
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

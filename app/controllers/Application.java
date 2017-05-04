@@ -92,6 +92,9 @@ public class Application extends Controller {
     public static void register() {
         render();
     }
+    public static void xiugai() {
+        render();
+    }
     public static void registerinfo(String username,String phonenum,String password) {
     	UserInfo theinfo = UserInfo.find("userName = ? and phoneNum = ?",username,phonenum).first();
     	UserInfo name = UserInfo.find("userName = ?",username).first();
@@ -117,6 +120,19 @@ public class Application extends Controller {
     	user.payNum = payNum;
     	user.weiNum = weiNum;
         user.save();
+    }
+    public static void xiugaiInfo(String phonenum,String password) {
+    	UserInfo user = UserInfo.find("phoneNum = ?",phonenum).first();
+    	String data;
+    	if(user!=null){
+    		data = "1";
+    		user.password = password;
+    		user.save();
+    		renderJSON(data);
+    	}else{
+    		data = "0";
+    		renderJSON(data);
+    	}
     }
     public static void login() {
         render();

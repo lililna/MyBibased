@@ -6,6 +6,7 @@
 		<title></title>
 		
 		<script type="text/javascript" src="@{'/public/javascripts/jquery-1.11.1.min.js'}"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/layer.js'}"></script>
 		<script type="text/javascript" src="@{'/public/javascripts/jquery.cookie.js'}"></script>
 		<script type="text/javascript" src="@{'/public/javascripts/rem.js'}"></script>
 		<script type="text/javascript" src="@{'/public/javascripts/gwc.js'}"></script>
@@ -56,5 +57,11 @@
 	            <p>个人中心</p>
 	        </a>
 	    </div>
+	    <script type="text/javascript">
+	    	$("#btnall").click(function(){
+	    		var z = $("#hj").html();
+	    		layer.alert("共需支付："+z+"元！");
+	    	})
+	    </script>
 	</body>
 </html>

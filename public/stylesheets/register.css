@@ -17,6 +17,7 @@ body {
   position: fixed;
   top: 0;
   font-size: 0.8rem;
+  z-index:999;
 }
 .ziliao .ziliao1 {
   width: 90%;

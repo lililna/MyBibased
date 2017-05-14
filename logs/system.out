@@ -1,0 +1,101 @@
+Listening for transport dt_socket at address: 8000
+15:44:48,533 INFO  ~ Starting G:\bibased
+15:44:49,354 WARN  ~ You're running Play! in DEV mode
+15:44:49,559 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+~ Server is up and running
+15:44:52,124 ERROR ~ Restart: Need to restart Play because G:\bibased\conf\application.conf has been changed
+java.lang.RuntimeException: Need to restart Play because G:\bibased\conf\application.conf has been changed
+	at play.ConfigurationChangeWatcherPlugin.onConfigurationFileChanged(ConfigurationChangeWatcherPlugin.java:30)
+	at play.ConfigurationChangeWatcherPlugin.detectChange(ConfigurationChangeWatcherPlugin.java:24)
+	at play.plugins.PluginCollection.detectChange(PluginCollection.java:598)
+	at play.Play.detectChanges(Play.java:641)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+15:44:52,804 ERROR ~ Database [default] Cannot connected to the database : Database [default] Driver not found (com.microsoft.sqlserver.jdbc.SQLServerDriver)
+java.lang.Exception: Database [default] Driver not found (com.microsoft.sqlserver.jdbc.SQLServerDriver)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:121)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:616)
+	at play.Play.start(Play.java:539)
+	at play.Play.detectChanges(Play.java:659)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+	at java.lang.ClassLoader.findClass(ClassLoader.java:530)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:92)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:118)
+	... 5 more
+15:44:53,711 ERROR ~ 
+
+@742honjnd
+Internal Server Error (500) for request GET /
+
+Database error
+A database error occurred : Cannot connected to the database[default], Database [default] Driver not found (com.microsoft.sqlserver.jdbc.SQLServerDriver)
+
+play.exceptions.DatabaseException: Cannot connected to the database[default], Database [default] Driver not found (com.microsoft.sqlserver.jdbc.SQLServerDriver)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:211)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:616)
+	at play.Play.start(Play.java:539)
+	at play.Play.detectChanges(Play.java:659)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Database [default] Driver not found (com.microsoft.sqlserver.jdbc.SQLServerDriver)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:121)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+	at java.lang.ClassLoader.findClass(ClassLoader.java:530)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:92)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:118)
+	... 5 more
+15:45:01,925 ERROR ~ Database [default] Cannot connected to the database : Database [default] Driver not found (com.microsoft.sqlserver.jdbc.SQLServerDriver)
+java.lang.Exception: Database [default] Driver not found (com.microsoft.sqlserver.jdbc.SQLServerDriver)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:121)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:616)
+	at play.Play.start(Play.java:539)
+	at play.Play.detectChanges(Play.java:656)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+	at java.lang.ClassLoader.findClass(ClassLoader.java:530)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:92)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:118)
+	... 5 more
+15:45:01,956 ERROR ~ 
+
+@742honjne
+Internal Server Error (500) for request GET /
+
+Database error
+A database error occurred : Cannot connected to the database[default], Database [default] Driver not found (com.microsoft.sqlserver.jdbc.SQLServerDriver)
+
+play.exceptions.DatabaseException: Cannot connected to the database[default], Database [default] Driver not found (com.microsoft.sqlserver.jdbc.SQLServerDriver)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:211)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:616)
+	at play.Play.start(Play.java:539)
+	at play.Play.detectChanges(Play.java:656)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Database [default] Driver not found (com.microsoft.sqlserver.jdbc.SQLServerDriver)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:121)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+	at java.lang.ClassLoader.findClass(ClassLoader.java:530)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:92)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:118)
+	... 5 more

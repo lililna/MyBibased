@@ -33,8 +33,10 @@ $(".iknow").click(function(){
 $(".collect").click(function(){
 	if($(this).children("p").attr("type")==1){
 		$(this).children("p").attr("type","0").css("color","");
+		layer.msg("已取消收藏！");
 	}else{
 		$(this).children("p").attr("type","1").css("color","#ff9900");
+		layer.msg("收藏成功！");
 	}
 	
 })

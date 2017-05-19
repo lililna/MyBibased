@@ -147,7 +147,7 @@ $(function(){
 						'<div>'+
 							'<div>'+
 								'<input value="-" class="btn1" type="button" type-id="'+msg[i].typeId+'">'+
-								'<input value="'+msg[i].count+'" class="txt" type="text">'+
+								'<input disabled="true" value="'+msg[i].count+'" class="txt" type="text">'+
 								'<input value="+" class="btn2" type="button" type-id="'+msg[i].typeId+'">'+
 							'</div>'+
 							'<span class="sanchu" type-id="'+msg[i].typeId+'">✖删除</span>'
